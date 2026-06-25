@@ -5,7 +5,7 @@ export default function RecetaCard({ receta }: { receta: Receta }) {
   return (
     <Link
       href={`/recetas/${receta.slug}`}
-      className="group block rounded-2xl bg-white border border-naranja-suave overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
+      className="group block rounded-2xl bg-white border border-naranja-suave overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98] transition-all"
     >
       <div className="aspect-[4/3] flex items-center justify-center bg-linear-to-br from-naranja-suave to-beige text-6xl">
         {receta.emoji}

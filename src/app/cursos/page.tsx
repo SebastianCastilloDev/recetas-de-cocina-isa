@@ -17,7 +17,7 @@ export default function CursosPage() {
             href={c.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block rounded-2xl bg-white border border-naranja-suave p-5 shadow-sm hover:shadow-md transition-all"
+            className="group block rounded-2xl bg-white border border-naranja-suave p-5 shadow-sm hover:shadow-md active:scale-[0.98] transition-all"
           >
             <h2 className="text-lg font-bold text-marron group-hover:text-naranja transition-colors">
               🎓 {c.titulo}

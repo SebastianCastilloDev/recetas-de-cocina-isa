@@ -75,7 +75,7 @@ export default function Home() {
             <Link
               key={s.titulo}
               href={s.href}
-              className="group rounded-2xl bg-white border border-naranja-suave p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
+              className="group rounded-2xl bg-white border border-naranja-suave p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98] transition-all"
             >
               <div className="text-4xl">{s.emoji}</div>
               <h2 className="mt-3 text-xl font-bold text-marron group-hover:text-naranja transition-colors">
