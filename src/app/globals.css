@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --crema: #f7efe2;
+  --beige: #ecdcc4;
+  --naranja: #e0995a;
+  --naranja-suave: #f0c08a;
+  --marron: #6b4a2f;
+  --texto: #4a3b2c;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-crema: var(--crema);
+  --color-beige: var(--beige);
+  --color-naranja: var(--naranja);
+  --color-naranja-suave: var(--naranja-suave);
+  --color-marron: var(--marron);
+  --color-texto: var(--texto);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--crema);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Sin flash azul al tocar en móvil */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Áreas táctiles cómodas y feedback al tocar enlaces/botones */
+a,
+button {
+  touch-action: manipulation;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
 }
