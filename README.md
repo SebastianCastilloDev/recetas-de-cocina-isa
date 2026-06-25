@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍳 Recetario Familiar
 
-## Getting Started
+App web de un recetario familiar: recetas con ingredientes y preparación, historia
+de la familia, galería de fotos, cursos de cocina y recomendaciones de herramientas.
+Diseño cálido en tonos **beige y naranja**, **mobile-first** y con sensación de app nativa.
 
-First, run the development server:
+Construido con **Next.js 16 (App Router) + React 19 + Tailwind CSS v4**.
+
+---
+
+## 🚀 Cómo ejecutarlo
+
+Requisitos: tener instalado [Node.js](https://nodejs.org/) (versión 18 o superior).
 
 ```bash
+# 1. Instalar dependencias (solo la primera vez)
+npm install
+
+# 2. Levantar el servidor de desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Luego abre **http://localhost:3000** en el navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> 💡 Para verlo en el teléfono, abre `http://TU-IP-LOCAL:3000` desde el celular
+> conectado a la misma red Wi-Fi (la IP aparece como "Network" al iniciar `npm run dev`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Otros comandos
 
-## Learn More
+```bash
+npm run build   # Compila la versión optimizada para producción
+npm run start   # Sirve la versión ya compilada
+npm run lint    # Revisa el código
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Características
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Navegación mobile-first**: barra superior con menú hamburguesa animado y una
+  **barra inferior tipo app nativa** en el celular.
+- **Estado activo** en los enlaces para saber siempre dónde estás.
+- **Buscador de recetas** por nombre, categoría o ingrediente.
+- **Feedback táctil**, áreas de toque cómodas, `safe-area` y `theme-color`.
+- Se puede **agregar a la pantalla de inicio** del teléfono y abrir a pantalla completa.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗺️ Páginas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Sección | Ruta | Descripción |
+|---|---|---|
+| Inicio | `/` | Portada con frase, buscador y accesos a cada sección |
+| Recetas | `/recetas` | Listado + buscador de recetas |
+| Detalle | `/recetas/[slug]` | Ingredientes y preparación de cada receta |
+| Historia | `/historia` | Historia de la familia (texto + imagen) |
+| Imágenes | `/imagenes` | Galería de fotos por receta |
+| Cursos | `/cursos` | Enlaces a cursos de cocina en internet |
+| Herramientas | `/herramientas` | Recomendaciones de utensilios de cocina |
+
+---
+
+## ✏️ Cómo editar el contenido
+
+No hace falta tocar el diseño. Todo el texto vive en dos archivos:
+
+- **`src/data/recetas.ts`** — las recetas (nombre, porciones, ingredientes y pasos).
+- **`src/data/contenido.ts`** — la frase, el número de WhatsApp, la historia
+  familiar, los cursos y las herramientas.
+
+Por ejemplo, para agregar una receta nueva, copia un bloque dentro de `recetas`
+y cambia los datos:
+
+```ts
+{
+  slug: "pan-amasado",          // identificador en la URL (sin espacios ni tildes)
+  nombre: "Pan amasado",
+  emoji: "🍞",
+  porciones: "8 panes",
+  categoria: "Panadería",
+  ingredientes: ["500 g de harina", "..."],
+  preparacion: ["Mezclar...", "Amasar...", "Hornear..."],
+}
+```
+
+### Cambiar las fotos
+
+Hoy las recetas y la galería usan emojis y recuadros de color como marcador de
+posición. Para usar fotos reales, coloca las imágenes en la carpeta `public/` y
+reemplaza esos recuadros por el componente `<Image>` de Next.js.
+
+---
+
+## 🗂️ Estructura del proyecto
+
+```
+src/
+├─ app/                 # Páginas (cada carpeta es una ruta)
+│  ├─ page.tsx          # Inicio
+│  ├─ recetas/          # Listado y detalle de recetas
+│  ├─ historia/
+│  ├─ imagenes/
+│  ├─ cursos/
+│  ├─ herramientas/
+│  ├─ layout.tsx        # Estructura común (navbar, footer, barra inferior)
+│  └─ globals.css       # Colores y estilos globales
+├─ components/          # Navbar, BottomNav, Footer, tarjetas, buscador
+└─ data/                # Contenido editable (recetas y textos)
+```
+
+---
+
+## ☁️ Publicar online (opcional)
+
+La forma más simple es [Vercel](https://vercel.com):
+
+1. Sube el proyecto a un repositorio de GitHub.
+2. Importa el repo en Vercel.
+3. Vercel detecta Next.js solo y entrega un link público.
+
+---
+
+Hecho con cariño para el recetario de la familia 🧡
