@@ -2,6 +2,7 @@ export type Receta = {
   slug: string;
   nombre: string;
   emoji: string;
+  imagen: string;
   porciones: string;
   categoria: string;
   ingredientes: string[];
@@ -15,6 +16,7 @@ export const recetas: Receta[] = [
     slug: "lasana-de-carne-y-verduras",
     nombre: "Lasaña de carne y verduras",
     emoji: "🍝",
+    imagen: "/lasagna.png",
     porciones: "6 porciones",
     categoria: "Plato principal",
     ingredientes: [
@@ -44,6 +46,7 @@ export const recetas: Receta[] = [
     slug: "risotto-de-champinones",
     nombre: "Risotto de champiñones",
     emoji: "🍚",
+    imagen: "/risotto.png",
     porciones: "4 porciones",
     categoria: "Plato principal",
     ingredientes: [
@@ -71,6 +74,7 @@ export const recetas: Receta[] = [
     slug: "kuchen-de-manzana",
     nombre: "Kuchen de manzana",
     emoji: "🥧",
+    imagen: "/kuchen.png",
     porciones: "8 porciones",
     categoria: "Postre",
     ingredientes: [
@@ -97,6 +101,7 @@ export const recetas: Receta[] = [
     slug: "tiramisu-en-vaso",
     nombre: "Tiramisú en vaso",
     emoji: "🍮",
+    imagen: "/tiramisu.png",
     porciones: "6 vasos",
     categoria: "Postre",
     ingredientes: [

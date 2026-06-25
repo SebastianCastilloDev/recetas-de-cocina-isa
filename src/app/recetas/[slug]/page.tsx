@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getReceta, recetas } from "@/data/recetas";
 
@@ -31,8 +32,15 @@ export default async function RecetaPage({
         ← Volver a las recetas
       </Link>
 
-      <div className="mt-4 rounded-2xl bg-linear-to-br from-naranja-suave to-beige aspect-[16/7] flex items-center justify-center text-7xl">
-        {receta.emoji}
+      <div className="relative mt-4 rounded-2xl overflow-hidden bg-beige aspect-16/7">
+        <Image
+          src={receta.imagen}
+          alt={receta.nombre}
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 768px"
+          className="object-cover"
+        />
       </div>
 
       <span className="mt-6 inline-block text-sm font-medium text-naranja">
