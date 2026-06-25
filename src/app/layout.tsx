@@ -1,8 +1,15 @@
 import type { Metadata, Viewport } from "next";
+import { Dancing_Script } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BottomNav from "@/components/BottomNav";
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-script",
+  weight: ["400", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Recetario Familiar",
@@ -28,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="h-full antialiased">
+    <html lang="es" className={`h-full antialiased ${dancingScript.variable}`}>
       <body className="min-h-full flex flex-col bg-crema text-texto">
         <Navbar />
         {/* pb-20 deja espacio para la barra inferior en móvil */}

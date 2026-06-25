@@ -16,6 +16,7 @@
   --color-naranja-suave: var(--naranja-suave);
   --color-marron: var(--marron);
   --color-texto: var(--texto);
+  --font-script: var(--font-script);
 }
 
 html {

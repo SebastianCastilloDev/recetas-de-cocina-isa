@@ -12,9 +12,8 @@ export const sitio = {
 export const historia = {
   titulo: "Historia Familiar",
   parrafos: [
-    "Este recetario nació de las manos de la abuela, que durante años guardó en una libreta sus recetas favoritas. Cada plato cuenta un pedacito de nuestra historia: los almuerzos de domingo, los cumpleaños y las tardes de lluvia con olor a kuchen recién horneado.",
-    "Con el tiempo, la familia fue sumando sus propias recetas y secretos. Hoy reunimos todo en este espacio para que nunca se pierdan y para que las próximas generaciones también puedan cocinarlas.",
-    "Más que ingredientes y pasos, aquí encontrarás recuerdos. Esperamos que cada receta te haga sentir, aunque sea un poquito, en la cocina de la abuela.",
+    "Todo comenzó la abuela de Simón Vera, una mujer apasionada por la cocina y por reunir a la familia alrededor de la mesa. Durante muchos años fue escribiendo en un recetario las preparaciones que aprendió de su madre, de su abuela, de ella misma y de otros familiares. Con el paso del tiempo, ese cuaderno se convirtió en un verdadero tesoro familiar, ya que guardaba recetas transmitidas de generación en generación.",
+    "Cuando ya era mayor, decidió entregar ese valioso recetario a su nieto, Simón Vera, para que las recetas y las tradiciones familiares no se perdieran. Gracias a ese legado, nosotros recopilamos toda esa información y la transformamos en un recetario digital, conservando la historia y las preparaciones de nuestra familia para que puedan seguir compartiéndose con las futuras generaciones.",
   ],
 };
 
